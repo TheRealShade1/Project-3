@@ -41,7 +41,7 @@ Unit tests are using the Jasmine Framework.
 
 The e2e tests are using Protractor and Jasmine.
 
-## Dependencies:
+## Dependencies
 
 The dependencies required to run the project are listed as follows:
 
