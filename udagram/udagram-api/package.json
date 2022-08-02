@@ -12,7 +12,7 @@
     "dev": "npx ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb list && eb use Khaledudagram-env && $ eb setenv POSTGRES_USERNAME = POSTGRES_USERNAME && $ eb setenv POSTGRES_PASSWORD = POSTGRES_PASSWORD && $ eb setenv POSTGRES_DB = POSTGRES_DB && $ eb setenv PORT = PORT && $ eb setenv POSTGRES_HOST = POSTGRES_HOST && $ eb setenv DB_PORT = DB_PORT && $ eb setenv AWS_REGION = AWS_REGION && $ eb setenv AWS_ACCESS_KEY = AWS_ACCESS_KEY && $ eb setenv AWS_SECRET = AWS_SECRET && $ eb setenv JWT_SECRET = JWT_SECRET && eb deploy",
+    "deploy": "npm run build && eb list && eb use Khaledudagram-env && $ eb setenv POSTGRES_USERNAME = POSTGRES_USERNAME && $ eb setenv POSTGRES_PASSWORD = POSTGRES_PASSWORD && $ eb setenv POSTGRES_DB = POSTGRES_DB && $ eb setenv PORT = PORT && $ eb setenv POSTGRES_HOST = POSTGRES_HOST && $ eb setenv DB_PORT = DB_PORT && $ eb setenv AWS_DEFAULT_REGION = AWS_REGION && $ eb setenv AWS_ACCESS_KEY_ID = AKIASFQT25CWU2QDIDPM && $ eb setenv AWS_SECRET_KEY = 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 && $ eb setenv JWT_SECRET = JWT_SECRET && eb deploy",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && bestzip Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
