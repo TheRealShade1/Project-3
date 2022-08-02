@@ -1,7 +1,7 @@
 
 branch-defaults:
   default:
-    environment: Khaledudagram-env
+    environment: Khaledudagram-env-1
     group_suffix: null
 deploy:
   artifact: www/Archive.zip
